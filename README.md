@@ -49,6 +49,7 @@ The contest dataset
 
 Data Caveats
    - Any part of any 10-minute data segment can potentially contain “data drop-out” where the intracranial brain implant has temporarily failed to record data. This data drop-out corresponds to iEEG signal values of zeros across all channels at a given time sample. 
+      - Orginal data was floating point in edf format, sometimes 0 may not be perfectly 0. if you can't see all 0's, compute the derivative and all the channels with dropout data will be 0.
    - The data may also contain artifacts such as large amplitude rapid signal transitions that can be removed from analysis.
 
 Algorithms
